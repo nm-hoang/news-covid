@@ -1,0 +1,23 @@
+<%- include('header'); -%>
+<%- include('./navbar') %>
+<title>Profile</title>
+<h1>Thông tin cá nhân</h1>
+
+<% if (currentUser.token !== null) { %>
+    <h2>Vui lòng kích hoạt tài khoản <h2>
+<% }  else { %>
+
+<ul>
+    <li><strong>ID: </strong> <%= currentUser.id%></li>
+    <li><strong>Email: </strong> <%= currentUser.email %></li>
+    <li><strong>Tên hiển thị: </strong> <%= currentUser.displayName %></li>
+</ul>
+<form method ="POST" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="avatar">Ảnh đại diện</label>
+      <input type="file" class="form-control-file" id="avatar" name ="avatar">
+    </div>
+    <button type="submit" class ="btn btn-primary">Upload</button>
+</form>
+<% } %>
+<%- include('footer'); -%>

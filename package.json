@@ -1,0 +1,36 @@
+{
+  "name": "hellowebbyhoang",
+  "version": "1.0.0",
+  "description": "",
+  "main": "send-email.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.19.0",
+    "cookie-session": "^1.4.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "express-validator": "^6.5.0",
+    "fetch": "^1.1.0",
+    "multer": "^1.4.2",
+    "node-cron": "^2.0.3",
+    "node-fetch": "^2.6.0",
+    "node-pre-gyp": "^0.14.0",
+    "node-schedule": "^1.3.2",
+    "nodemailer": "^6.4.6",
+    "password-hash": "^1.2.2",
+    "pg": "^8.2.1",
+    "pg-hstore": "^2.3.3",
+    "routes": "^2.1.0",
+    "rss-parser": "^3.8.0",
+    "sequelize": "^5.21.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "MinhHoang <nmhoang.28@gmail.com>",
+  "license": "MIT"
+}

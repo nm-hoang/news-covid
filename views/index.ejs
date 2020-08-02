@@ -1,0 +1,20 @@
+<%- include('header'); -%>
+<%- include('./navbar') %>
+<title>Coronavirus update</title>
+    
+    <h3 class = "titleh3">Hello : <%= currentUser ? (currentUser.token ? 'Vui long kich hoat tai khoan ' : currentUser.displayName ):'Guest' %> </h3>
+  <% if(articlelist) { %>
+                <article class="all-articles">
+                    <h1>Covid-19 news</h1>      
+                    <% articlelist.forEach(article => { %>
+                        <article class="article">
+                            <h2><%= article.title %></h2>
+                            <a  style ="color:#4682B4" href="<%= article.link %>"><%= article.link %></a>
+                            <p style = "color:#008080">Date/Time: <span ><%= article.publishedAt %></span></p>
+                            <p><%= article.content %></p>
+                        </article>
+                        <br>
+                <% }) %>
+                </article>
+    <% } %>
+<%- include('footer'); -%>
